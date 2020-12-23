@@ -1,4 +1,4 @@
-# Protein Folding on Digital Ocean Infrastructure
+# Protein Folding on Digital Ocean Infrastructure 🦈
 **WARNING:** This script will generate a cluster with a projected cost of $400 per month. 
 Make sure to destroy the cluster after you've learned all you can. Running the cluster for a couple hours should cost less than a dollar 😉
 
