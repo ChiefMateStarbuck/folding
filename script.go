@@ -29,7 +29,7 @@ func createCLuster(client *godo.Client, ctx context.Context) *godo.KubernetesClu
 		NodePools: []*godo.KubernetesNodePoolCreateRequest{
 			{
 				Name:   "folding-pool",
-				Size:   "c-32",
+				Size:   "s-8vcpu-16gb",
 				Count:  5,
 				Tags:   []string{"folding"},
 				Labels: map[string]string{"app": "folding"},
@@ -43,7 +43,7 @@ func createCLuster(client *godo.Client, ctx context.Context) *godo.KubernetesClu
 
 // deployFoldingImage
 func deployFoldingImage(id string) {
-	fmt.Println("Waiting for the cluster to be provisioned...")
+	fmt.Println("Waiting for the cluster to be provisioned. This should take 4 minutes...")
 	time.Sleep(4 * time.Minute)
 	cmd := exec.Command("doctl", "kubernetes", "cluster", "kubeconfig", "save", id)
 	err := cmd.Run()
