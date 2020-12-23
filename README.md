@@ -1,5 +1,5 @@
 # Protein Folding on Digital Ocean Infrastructure
-**WARNING:** This script will generate a cluster with a projected cost of 400 per month. 
+**WARNING:** This script will generate a cluster with a projected cost of $400 per month. 
 Make sure to destroy the cluster after you've learned all you can. Running the cluster for a few hours should only cost you a few dollars 😉
 
 ## Requirments
@@ -13,13 +13,13 @@ Make sure to destroy the cluster after you've learned all you can. Running the c
 2. Add your api token to your environment variables like so
 
 ```
-$ export DIGITALOCEAN_ACCESS_TOKEN=<your-access-token>
+export DIGITALOCEAN_ACCESS_TOKEN=<your-access-token>
 ````
 
 3. In the root of the project run 
 
 ```
-$ go run script.go
+go run script.go
 ```
 
 You're all set! Check your cloud console for more details 🎉🥳
