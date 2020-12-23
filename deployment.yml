@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: folding
+  labels:
+    app: folding-label
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: folding 
+  template:
+    metadata:
+      labels:
+        app: folding   
+    spec:
+      containers:
+      - name: folding-container
+        image: ghcr.io/linuxserver/foldingathome
