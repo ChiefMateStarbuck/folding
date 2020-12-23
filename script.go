@@ -12,7 +12,7 @@ import (
 
 func main() {
 	fmt.Println("Creating kube cluster...")
-	client := godo.NewFromToken(os.Getenv("DO_TOKEN"))
+	client := godo.NewFromToken(os.Getenv("DIGITALOCEAN_ACCESS_TOKEN"))
 	ctx := context.TODO()
 	cluster := createCLuster(client, ctx)
 	deployFoldingImage(cluster.ID)
